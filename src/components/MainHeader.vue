@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h1>we make</h1>
+    <h1>
+      we make
+      <span class="typed-text">apps</span>
+    </h1>
   </div>
 </template>
 
@@ -21,5 +24,8 @@ export default {
 h1 {
   font-weight: bolder;
   font-size: 6rem;
+}
+.typed-text {
+  color: #e74c3c;
 }
 </style>
