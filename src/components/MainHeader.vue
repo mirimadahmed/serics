@@ -18,4 +18,8 @@ export default {
   justify-content: center;
   align-items: center;
 }
+h1 {
+  font-weight: bolder;
+  font-size: 6rem;
+}
 </style>
