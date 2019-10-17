@@ -8,8 +8,21 @@
 </template>
 
 <script>
+import { setTimeout } from "timers";
 export default {
-  name: "MainHeader"
+  name: "MainHeader",
+  data() {
+    return {
+      newTextDelay: 2000
+    };
+  },
+  methods: {
+    typeText() {},
+    eraseText() {}
+  },
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  }
 };
 </script>
 
