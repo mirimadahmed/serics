@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    <h1>
-      we make
-      <span class="typed-text">{{ textValue }}</span>
-    </h1>
+    <div class="left">
+      <h1>we make</h1>
+    </div>
+    <div class="right">
+      <h1 class="typed-text">{{ textValue }}</h1>
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
   name: "MainHeader",
   data() {
     return {
-      typingSpeed: 200,
+      typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
       textArray: ["apps", "solutions", "real-life solutions"],
@@ -70,5 +72,12 @@ h1 {
 }
 .typed-text {
   color: #e74c3c;
+}
+.left {
+  width: 40%;
+}
+.right {
+  width: 60%;
+  text-align: left;
 }
 </style>
