@@ -1,26 +1,33 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <MainHeader />
+  </div>
 </template>
 
 <script>
+import MainHeader from "@/components/MainHeader.vue";
+
 export default {
   name: "app",
-  components: {}
+  components: {
+    MainHeader
+  }
 };
 </script>
 
 <style>
 body {
   margin: 0px;
-}
-#app {
+  color: white;
+  background: #54a0ff;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: white;
-  background: #54a0ff;
-  width: 100vw;
-  height: 100vh;
+}
+#app {
+  height: 100%;
 }
 </style>
