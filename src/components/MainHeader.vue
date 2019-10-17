@@ -1,11 +1,9 @@
 <template>
   <div class="container">
-    <div class="left">
-      <h1>we make</h1>
-    </div>
-    <div class="right">
-      <h1 class="typed-text">{{ textValue }}</h1>
-    </div>
+    <h1>
+      we
+      <span class="typed-text">{{ textValue }}</span>
+    </h1>
   </div>
 </template>
 
@@ -18,7 +16,7 @@ export default {
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
-      textArray: ["apps", "solutions", "real-life solutions"],
+      textArray: ["make apps", "craft solutions", "are SERICS"],
       textValue: "",
       arrayIndex: 0,
       charIndex: 0
@@ -72,12 +70,5 @@ h1 {
 }
 .typed-text {
   color: #e74c3c;
-}
-.left {
-  width: 40%;
-}
-.right {
-  width: 60%;
-  text-align: left;
 }
 </style>
