@@ -23,8 +23,32 @@ export default {
     };
   },
   methods: {
-    typeText() {},
-    eraseText() {}
+    typeText() {
+      if (this.charIndex < this.textArray[this.arrayIndex].length) {
+        this.textValue += this.textArray[this.arrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if (this.charIndex > 0) {
+        this.textValue = this.textArray[this.arrayIndex].substring(
+          0,
+          this.charIndex - 1
+        );
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      } else {
+        this.typeStatus = false;
+        this.arrayIndex += 1;
+        if (this.arrayIndex >= this.textArray.length) this.arrayIndex = 0;
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
+    }
   },
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
