@@ -2,7 +2,7 @@
   <div class="container">
     <h1>
       we make
-      <span class="typed-text">apps</span>
+      <span class="typed-text">{{ textValue }}</span>
     </h1>
   </div>
 </template>
@@ -13,7 +13,13 @@ export default {
   name: "MainHeader",
   data() {
     return {
-      newTextDelay: 2000
+      typingSpeed: 200,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      textArray: ["apps", "solutions", "real-life solutions"],
+      textValue: "",
+      arrayIndex: 0,
+      charIndex: 0
     };
   },
   methods: {
